@@ -1,9 +1,5 @@
 package com.qa.testdrivendevelopment;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Questions {
 	/**
 	 * EXAMPLE: THIS ONE HAS BEEN DONE FOR YOU <br>
@@ -34,15 +30,7 @@ public class Questions {
 	 * returnPosition("Fridge for sale",'z') → -1
 	 */
 	public int returnPosition(String input, char letter) {
-		String nospace = input.replaceAll("\\s+","");//removed whitespace
-//		System.out.println(nospace);
-		for (int i = 0; i < nospace.length(); i++) {
-			if (nospace.charAt(i) == letter) {
-				return i+1;
-			}
-		}
-//		System.out.println(nospace.indexOf(letter)+1);
-		return -1;
+		return 0;
 	}
 
 	/**
@@ -62,15 +50,7 @@ public class Questions {
 	 * zipped("return","letter") → "rleettutrenr" <br>
 	 */
 	public String zipped(String input1, String input2) {
-		StringBuilder merge = new StringBuilder(); //new empty string to add to
-		for (int i = 0; i < input1.length() || i < input2.length(); i++) {
-			if (i < input1.length()) {
-				merge.append(input1.charAt(i));
-			}if (i < input2.length()) {
-				merge.append(input2.charAt(i));				
-			}
-		}
-		return merge.toString();
+		return null;
 	}
 
 	/**
@@ -85,14 +65,7 @@ public class Questions {
 	 * removeDuplicates({"Dog","DoG","Cat"}) → {"Dog","DoG","Cat"}
 	 */
 	public String[] removeDuplicates(String[] stringArray) {
-		ArrayList<String> duplicates = new ArrayList<String>();
-		for (int i = 0; i < stringArray.length; i++) {
-			if (!duplicates.contains(stringArray[i])) {
-				duplicates.add(stringArray[i]);
-			}
-		}
-		stringArray = duplicates.toArray(new String[duplicates.size()]);
-		return stringArray;
+		return null;
 	}
 
 	/**
@@ -120,13 +93,6 @@ public class Questions {
 	 * → {"Bert","Jeff"}
 	 */
 	public String[] csvScan(String csvInput) {
-//		String[] seperate = csvInput.split(",");
-		System.out.println(csvInput);
-		String nonewline = csvInput.replaceAll("\n, ",",");
-		System.out.println(nonewline);
-		List<String> seperate = Arrays.asList(nonewline.split(","));
-		System.out.println(seperate);
-		
 		return null;
 	}
 
@@ -140,36 +106,20 @@ public class Questions {
 	 * listGen() → {154,102,132,178,164}
 	 */
 	public int[] listGen() {
-		int[] even = new int[50];
-		for (int i = 0; i <= 200; i++) {
-			if (i % 2 == 0 && i <= 100) {
-				even[i++]++;
-			}
-			System.out.println(even);
-		}
-		return even;
-//		return new int[] { 0, 0, 0, 0, 0 };
+		return null;
 	}
 
 	/**
-	 * A prime number is one which is only divisible by one and itself.  <br>
-	 * Write a function which returns the boolean True if a number is prime, and the boolean False if not. <br>
-	 *  <br>
+	 * A prime number is one which is only divisible by one and itself. <br>
+	 * Write a function which returns the boolean True if a number is prime, and the
+	 * boolean False if not. <br>
+	 * <br>
 	 * For Example: <br>
 	 * isPrime(3) → True <br>
 	 * isPrime(8) → False
 	 */
 	public boolean isPrime(int num) {
-		int ref = 2;
-		if (num == 0 || num == 1) {
-			return false;
-		} else if (num / 2 > ref && num % ref == 0) {
-			return false;
-		} else if (num == ref) {
-			return true;
-		} else {
-			return true;
-		}
+		return false;
 	}
 
 	/**
@@ -181,16 +131,7 @@ public class Questions {
 	 * getVowel("hEelLoooO") → 6
 	 */
 	public int getVowel(String input) {
-//		char[] vowel = input.toCharArray();
-		String IGcase = input.toLowerCase();
-		int increment = 0;
-		for (int x = 0; x < IGcase.length(); x++) {
-			char index = IGcase.charAt(x);
-			if (index == 'a' || index == 'e' || index == 'i' || index == 'o' || index == 'u') {
-				increment++;
-			}
-		}
-		return increment;
+		return 0;
 	}
 
 	/**
@@ -204,20 +145,7 @@ public class Questions {
 	 * wordFinder("tripping", "gin") → True
 	 */
 	public boolean wordFinder(String initialWord, String madeString) {
-		char[] in1 = initialWord.toCharArray();//put characters from string into an array
-		char[] in2 = madeString.toCharArray();
-		int[] loop = new int[666];//any number below length=117 will not work
-		for (int i = 0; i < in1.length; i++) { //loop through array initialWord
-			loop[in1[i]]++;
-		}
-		for (int i = 0; i < in2.length; i++) {//loop through madeString array
-			if (loop[in2[i]] == 0) {
-				return false;
-			}else {
-				loop[in2[i]]--;
-			}
-		}
-		return true;
+		return false;
 	}
 
 	/**
@@ -234,24 +162,7 @@ public class Questions {
 	 * iBeforeE("height") → False
 	 */
 	public boolean iBeforeE(String input) {
-		char[] check = input.toCharArray();
-		for (int i = 0; i < check.length; i++) {
-			if (check[i] == 'e' && check[i + 1] == 'i') {
-				if (check[i - 1] == 'c') {
-					return true;
-				} else {
-					return false;
-				}
-			}
-			if (check[i] == 'i' && check[i + 1] == 'e') {
-				if (check[i - 1] != 'c') {
-					return true;
-				} else {
-					return false;
-				}
-			}
-		}
-		return true;
+		return false;
 	}
 
 	/**
@@ -267,11 +178,7 @@ public class Questions {
 	 * factorial(8) → 40320
 	 */
 	public int factorial(int number) {
-		int output = 1;
-		for (int i = 1; i <= number; i++) {
-			output = output * i;
-		}
-		return output;
+		return 0;
 	}
 
 }
